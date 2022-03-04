@@ -10,18 +10,25 @@
             <li>Vue.js</li>
             <li>TailwindCSS</li>
         </u>
-        <h3 v-show="show_email">Send a message to {{ email }}</h3>
+        <h3 v-show="show_email">Send a message to {{ email }}.</h3>
+        <h3>Para acessar meu portfólio <a v-bind:href="my_link" target="_blank">basta clicar aqui!</a></h3>
+        <Picture />
     </div>
 </template>
 
 <script>
+import Picture from "./Picture.vue"
 export default {
     name: "Info",
+    components: {
+        Picture
+        },
     data() {
         return {
             is_employed: false,
             show_email: true,
-            email: "testingemail@email.com"
+            email: "testingemail@email.com",
+            my_link: "https://google.com"
         }
     }
 }
