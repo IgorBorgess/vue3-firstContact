@@ -10,8 +10,11 @@
             <li>Vue.js</li>
             <li>TailwindCSS</li>
         </u>
+        <div>
+            <button @click="showEmail">{{ buttonText }}</button>
+        </div>
         <h3 v-show="show_email">Send a message to {{ email }}.</h3>
-        <h3>Para acessar meu portfólio <a v-bind:href="my_link" target="_blank">basta clicar aqui!</a></h3>
+        <h3>To access my portfolio <a v-bind:href="my_link" target="_blank">click here!</a></h3>
         <Picture />
     </div>
 </template>
@@ -26,9 +29,20 @@ export default {
     data() {
         return {
             is_employed: false,
-            show_email: true,
+            show_email: false,
             email: "testingemail@email.com",
-            my_link: "https://google.com"
+            my_link: "https://google.com",
+            buttonText: "Show e-mail"
+        }
+    },
+    methods: {
+        showEmail() {
+            this.show_email = !this.show_email
+            if(!this.show_email) {
+                this.buttonText = "Show e-mail"
+            } else {
+                this.buttonText = "Hidden e-mail"
+            }
         }
     }
 }
