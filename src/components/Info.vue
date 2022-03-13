@@ -14,7 +14,7 @@
             <button @click="showEmail">{{ buttonText }}</button>
         </div>
         <h3 v-show="show_email">Send a message to {{ email }}.</h3>
-        <h3>To access my portfolio <a v-bind:href="my_link" target="_blank">click here!</a></h3>
+        <h3 class="test">To access my portfolio <a v-bind:href="my_link" target="_blank">click here!</a></h3>
         <Picture />
     </div>
 </template>
@@ -49,5 +49,7 @@ export default {
 </script>
 
 <style>
-
+    .father-paragraph {
+    color: red;
+    }
 </style>
