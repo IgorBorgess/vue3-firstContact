@@ -2,14 +2,14 @@
     <div>
         <h3 v-if="is_employed">I'm working at the moment.</h3>
         <h3 v-else>I'm unemployed at the moment.</h3>
-        <h3>I'm accostumed to using the following technologies:</h3>
-        <u>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Javascript</li>
-            <li>Vue.js</li>
-            <li>TailwindCSS</li>
-        </u>
+        <h3>Backend technologies:</h3>
+        <ul >
+            <li v-for="(technology, index) in backend_technologies" v-bind:key="index">{{ technology }}</li>
+        </ul>
+        <p>Frontend technologies:</p>
+        <ul>
+            <li v-for="technology in frontend_technologies" v-bind:key="technology.id">{{ technology.language }}</li>
+        </ul>
         <div>
             <button @click="showEmail">{{ buttonText }}</button>
         </div>
@@ -32,7 +32,13 @@ export default {
             show_email: false,
             email: "testingemail@email.com",
             my_link: "https://google.com",
-            buttonText: "Show e-mail"
+            buttonText: "Show e-mail",
+            backend_technologies: ["NodeJS", "Java"],
+            frontend_technologies: [
+                {id: 1, language: "HTML"},
+                {id: 2, language: "CSS"},
+                {id: 3, language: "Vue"}
+            ]
         }
     },
     methods: {
