@@ -20,11 +20,9 @@ export default {
     methods: {
         changeImage() {
             this.avatar = "/img/avatar2.png"
-            console.log(this.avatar)
         },
         revertChange() {
             this.avatar = "/img/avatar.png"
-            console.log(this.avatar)
         }
     }
 }
