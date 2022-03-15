@@ -33,8 +33,8 @@ export default {
             console.log("O nome é: " + name)
             console.log("O email é: " + email)
 
-            // Requisição (assíncrona) Ajax!
-            // Inserir no banco os dados!
+            // Asynchronous request (Ajax)!
+            // Insert the data into the database!
         }
     }
 }
