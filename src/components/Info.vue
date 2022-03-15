@@ -26,11 +26,13 @@ export default {
     components: {
         Picture
         },
+    props: {
+        email: String,
+        is_employed: Boolean
+    },
     data() {
         return {
-            is_employed: false,
             show_email: false,
-            email: "testingemail@email.com",
             my_link: "https://google.com",
             buttonText: "Show e-mail",
             backend_technologies: ["NodeJS", "Java"],

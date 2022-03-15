@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Description of the person: {{ name }}</h2>
-        <Info />
+        <Info v-bind:email="email" v-bind:is_employed="false" />
         <Form />
     </div>
 </template>
@@ -17,7 +17,8 @@ export default {
     },
     data() {
         return {
-            name: "Igor"
+            name: "Igor",
+            email: "testing2@email.com"
         }
     }
 }

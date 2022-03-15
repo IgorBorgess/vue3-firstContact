@@ -1,7 +1,7 @@
 <template>
   <div>
     <p class="father-paragraph">The test is being: {{ testing }}</p>
-    <Header />
+    <Header v-bind:logged_in="true" />
     <FirstComponent />
     <LifeCycle />
     <Person />
